@@ -7,6 +7,9 @@
 #include <dt-bindings/gpio/gpio.h>
 
 / {
+	qcom,msm-id = <206 0>;
+	qcom,board-id = <0x21300000 1>;
+
  	model = "BenQ T47"; 
  	compatible = "benq,t47", "qcom,msm8916";
 	chassis-type = "handset";
