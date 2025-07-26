@@ -17,6 +17,10 @@
 		#size-cells = <2>;
 		ranges;
 
+		bootargs = "root=/dev/mem0 initrd=0x84000000,0x1000000";
+		linux,initrd-start = <0x84000000>;
+		linux,initrd-end = <0x84FFFFFF>;
+
 		framebuffer0: framebuffer@f1000000 {
 			compatible = "simple-framebuffer";
 			reg = <0 0xf1000000 0 (1440 * 3200 * 4)>;
