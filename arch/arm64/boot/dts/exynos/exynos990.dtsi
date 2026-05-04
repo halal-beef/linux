@@ -375,6 +375,8 @@
 			interrupts = <GIC_SPI 313 IRQ_TYPE_LEVEL_HIGH>;
 			#address-cells = <1>;
 			#size-cells = <0>;
+			assigned-clocks = <&cmu_top CLK_MOUT_CMU_HSI1_MMC_CARD>;
+			assigned-clock-parents = <&cmu_top CLK_FOUT_SHARED2_PLL>;
 			clocks = <&cmu_hsi1 CLK_GOUT_HSI1_MMC_CARD_I_ACLK>,
 				 <&cmu_hsi1 CLK_GOUT_HSI1_MMC_CARD_SDCLKIN>;
 			clock-names = "biu", "ciu";
