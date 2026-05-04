@@ -368,6 +368,20 @@
 			interrupts = <GIC_SPI 312 IRQ_TYPE_LEVEL_HIGH>;
 		};
 
+		mmc: mmc@132e0000 {
+			compatible = "samsung,exynos850-dw-mshc-smu",
+				     "samsung,exynos7-dw-mshc-smu";
+			reg = <0x132e0000 0x2000>;
+			interrupts = <GIC_SPI 313 IRQ_TYPE_LEVEL_HIGH>;
+			#address-cells = <1>;
+			#size-cells = <0>;
+			clocks = <&cmu_hsi1 CLK_GOUT_HSI1_MMC_CARD_I_ACLK>,
+				 <&cmu_hsi1 CLK_GOUT_HSI1_MMC_CARD_SDCLKIN>;
+			clock-names = "biu", "ciu";
+			fifo-depth = <64>;
+			status = "disabled";
+		};
+
 		pinctrl_hsi2: pinctrl@13c30000 {
 			compatible = "samsung,exynos990-pinctrl";
 			reg = <0x13c30000 0x1000>;
